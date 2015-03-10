@@ -33,21 +33,19 @@ $( document ).ready(function() {
 <form id="myform">
 	<h1>Este es un ejemplo del trabajo</h1>
 	<?php $count=0; ?>
-	<?php foreach ($hitos as $dato): ?>
-		
-		<table class="table table-hover">
-      
-        <tr>
-          <th><input type="hidden" name="a[]" value="<?php echo $hitos[$count]['idHito']?>"></th>
-          <td><input type="text" name="b[]" value="<?php echo $hitos[$count]['description']?>"></td>
-          <td><input type="text" name="c[]" value="<?php echo $hitos[$count]['inicio']?>"></td>
-          <td><input type="text" name="d[]" value="<?php echo $hitos[$count]['fin']?>"></td>
-        </tr>
-      
+	<table class="table table-hover">
+		<?php foreach ($hitos as $dato): ?>
+			
+	        <tr>
+	          <th><input type="hidden" name="a[]" value="<?php echo $hitos[$count]['idHito']?>"></th>
+	          <td><input type="text" name="b[]" value="<?php echo $hitos[$count]['description']?>"></td>
+	          <td><input type="text" name="c[]" value="<?php echo $hitos[$count]['inicio']?>"></td>
+	          <td><input type="text" name="d[]" value="<?php echo $hitos[$count]['fin']?>"></td>
+	        </tr>
+	      
 		<?php $count++; ?>
-	<?php endforeach ?>
+		<?php endforeach ?>
 
-		</tbody>
     </table>
 </form>
  <button id="guardar">Guardar</button>
